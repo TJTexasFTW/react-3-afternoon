@@ -47,9 +47,11 @@ class App extends Component {
 
           <Compose />
 
+        {console.log("POSTS NOT WORKING: " + posts[2])}
+
         {
           posts.map( post => (
-            <Post key={ post.id } />
+            <Post key={ post.id } text={post.text} date={post.date} />
           ))
         }
 
