@@ -54,7 +54,7 @@ export default class Post extends Component {
       // const editing = this.state.editing
       // const showMasterMenu = this.state.showMasterMenu
     const { editing, showMasterMenu } = this.state;
-    const { text, date, id, updatePostFn } = this.props;
+    const { date, id, updatePostFn } = this.props;
 
     return (
       // Main body of post
@@ -96,12 +96,12 @@ export default class Post extends Component {
             // This has been pulled off of this.state via destructuring
             editing
             ?
-              <Edit text={ text }
+              <Edit text={ this.props.text }
                     id={ id }
                     hideEdit={ this.hideEdit }
                     updatePostFn={ updatePostFn } />
             :
-              <span className="Post__text">{text}</span>
+              <span className="Post__text">{this.props.text}</span>
           }
         </div>
 
