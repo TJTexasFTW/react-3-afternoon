@@ -52,7 +52,11 @@ class App extends Component {
 
         {
           posts.map( post => (
-            <Post key={ post.id } text={post.text} date={post.date} id={ post.id } updatePostFn={this.updatePost} />
+            <Post key={ post.id } 
+                  text={post.text} 
+                  date={post.date} 
+                  id={ post.id } 
+                  updatePostFn={this.updatePost} />
           ))
         }
 
